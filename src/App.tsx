@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Router as WouterRouter, Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -40,46 +40,45 @@ import CertificatePage from "./pages/CertificatePage";
 
 
 function Router() {
+  const baseUrl = import.meta.env.BASE_URL ? import.meta.env.BASE_URL.replace(/\/$/, "") : "";
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/courses"} component={Courses} />
-      <Route path={"/placement-test"} component={PlacementTest} />
-      <Route path={"/student-portal"} component={StudentPortal} />
-      <Route path={"/instructor-portal"} component={InstructorPortal} />
-      <Route path={"/admin-dashboard"} component={AdminDashboard} />
-      <Route path={"/student-learning-hub"} component={StudentLearningHub} />
-      <Route path={"/student-progress"} component={StudentProgress} />
-      <Route path={"/student-profile"} component={StudentProfile} />
-      <Route path={"/student-auth"} component={StudentAuth} />
-      <Route path={"/teacher-auth"} component={TeacherAuth} />
-      <Route path={"/teacher-dashboard"} component={TeacherDashboard} />
-      <Route path={"/video-assessment"} component={VideoAssessment} />
-      <Route path={"/teacher-reports"} component={TeacherReports} />
-      <Route path={"/live-lectures"} component={LiveLectures} />
-      <Route path={"/booking-system"} component={BookingSystem} />
-      <Route path={"/teacher-live-class"} component={TeacherLiveClass} />
-      <Route path={"/data-management"} component={DataManagement} />
-      <Route path={"/analytics-dashboard"} component={AnalyticsDashboard} />
-      <Route path={"/ai-tutor"} component={AITutorPractice} />
-      <Route path={"/teacher-profiles"} component={TeacherProfiles} />
-      <Route path={"/messaging"} component={Messaging} />
-      <Route path={"/coupon-management"} component={CouponManagement} />
-      <Route path={"/placement-test-results"} component={PlacementTestResults} />
-      <Route path={"/login"} component={Login} />
-      <Route path="/dashboard" component={AdminAnalyticsDashboard} />
-      <Route path="/shopping-cart" component={ShoppingCart} />
-      <Route path="/checkout" component={EnhancedCheckout} />
-      import CertificatePage from "./pages/CertificatePage";
-
-      // ...
-
-      <Route path="/order-confirmation" component={OrderConfirmation} />
-      <Route path="/certificate/:courseId" component={CertificatePage} />
-      <Route path="/404" component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <WouterRouter base={baseUrl}>
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/courses"} component={Courses} />
+        <Route path={"/placement-test"} component={PlacementTest} />
+        <Route path={"/student-portal"} component={StudentPortal} />
+        <Route path={"/instructor-portal"} component={InstructorPortal} />
+        <Route path={"/admin-dashboard"} component={AdminDashboard} />
+        <Route path={"/student-learning-hub"} component={StudentLearningHub} />
+        <Route path={"/student-progress"} component={StudentProgress} />
+        <Route path={"/student-profile"} component={StudentProfile} />
+        <Route path={"/student-auth"} component={StudentAuth} />
+        <Route path={"/teacher-auth"} component={TeacherAuth} />
+        <Route path={"/teacher-dashboard"} component={TeacherDashboard} />
+        <Route path={"/video-assessment"} component={VideoAssessment} />
+        <Route path={"/teacher-reports"} component={TeacherReports} />
+        <Route path={"/live-lectures"} component={LiveLectures} />
+        <Route path={"/booking-system"} component={BookingSystem} />
+        <Route path={"/teacher-live-class"} component={TeacherLiveClass} />
+        <Route path={"/data-management"} component={DataManagement} />
+        <Route path={"/analytics-dashboard"} component={AnalyticsDashboard} />
+        <Route path={"/ai-tutor"} component={AITutorPractice} />
+        <Route path={"/teacher-profiles"} component={TeacherProfiles} />
+        <Route path={"/messaging"} component={Messaging} />
+        <Route path={"/coupon-management"} component={CouponManagement} />
+        <Route path={"/placement-test-results"} component={PlacementTestResults} />
+        <Route path={"/login"} component={Login} />
+        <Route path="/dashboard" component={AdminAnalyticsDashboard} />
+        <Route path="/shopping-cart" component={ShoppingCart} />
+        <Route path="/checkout" component={EnhancedCheckout} />
+        <Route path="/order-confirmation" component={OrderConfirmation} />
+        <Route path="/certificate/:courseId" component={CertificatePage} />
+        <Route path="/404" component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+    </WouterRouter>
   );
 }
 
