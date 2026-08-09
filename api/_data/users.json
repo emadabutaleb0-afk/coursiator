@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1767696877388",
+    "email": "test1767696877206@example.com",
+    "password": "$2b$10$nXf9Pbb/KuQW6/AeAMdQ9Op5JXGgZMcD/8Uoi1YfeKzv2vWmpZcSm",
+    "name": "Test Student",
+    "role": "student",
+    "createdAt": "2026-01-06T10:54:37.388Z"
+  },
+  {
+    "id": "1767696900437",
+    "email": "test1767696900267@example.com",
+    "password": "$2b$10$E4EDF5RmpaczTguuQSCW1eoxU3My1RcR6wnq.rn42llvktE7CuEY6",
+    "name": "Test Student",
+    "role": "student",
+    "createdAt": "2026-01-06T10:55:00.436Z"
+  },
+  {
+    "id": "1767697454234",
+    "email": "browser_test_user@example.com",
+    "password": "$2b$10$TmZiKJarwnXiV05POIJ7W.EFvWDfhyTDd8QIGw7mPsH9VRuAog2Gm",
+    "name": "Browser Test User",
+    "role": "student",
+    "createdAt": "2026-01-06T11:04:14.233Z"
+  },
+  {
+    "id": "1767698906303",
+    "email": "test1767698906105@example.com",
+    "password": "$2b$10$.8C6DG.xCtYQAzvbIueHaelIqQXnV8epbpuPy/RbFjpF8rsRESAZy",
+    "name": "Test Student",
+    "role": "student",
+    "createdAt": "2026-01-06T11:28:26.302Z"
+  },
+  {
+    "id": "1767698906545",
+    "email": "teacher1767698906439@example.com",
+    "password": "$2b$10$chGYgEw44GV3.5j3GAJT1.q6xjSzmlIaI8epELKOxxTQzUPzCXYz6",
+    "name": "Test Teacher",
+    "role": "instructor",
+    "createdAt": "2026-01-06T11:28:26.544Z"
+  },
+  {
+    "id": "1767699190631",
+    "email": "final_teacher@example.com",
+    "password": "$2b$10$OzSFbV64MG4JfemCsb/Hnuw9mwCyy5jI46WhqaWatLEmd5syefrK.",
+    "name": "Final Teacher Test",
+    "role": "instructor",
+    "createdAt": "2026-01-06T11:33:10.631Z"
+  },
+  {
+    "id": "demo_student",
+    "email": "student@coursiator.com",
+    "password": "$2b$10$MlGoWOyXwQRWaYNoCpt6AuwOYLbTJ1Gvx8AhZZaBBK7.FR74lTwJi",
+    "name": "Demo Student",
+    "role": "student",
+    "createdAt": "2026-01-06T12:00:00.000Z"
+  },
+  {
+    "id": "demo_instructor",
+    "email": "instructor@coursiator.com",
+    "password": "$2b$10$MlGoWOyXwQRWaYNoCpt6AuwOYLbTJ1Gvx8AhZZaBBK7.FR74lTwJi",
+    "name": "Demo Instructor",
+    "role": "instructor",
+    "createdAt": "2026-01-06T12:00:00.000Z"
+  }
+]
